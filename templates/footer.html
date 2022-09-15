@@ -1,0 +1,140 @@
+    <!-- footer.html -->
+    <footer class="text-bg-dark">
+      <div class="vh-100 container py-4 py-lg-5 px-4 px-lg-3">
+        <div class="row">
+          <!-- Development -->
+          <div class="col-6 col-lg-2">
+            <h5>DEVELOPMENT</h5>
+            <ul class="nav flex-column">
+              <li class="nav-item mb-2"><a class="nav-link p-0 link-secondary" href="/notes">Release Notes</a></li>
+              <li class="nav-item mb-2"><a class="nav-link p-0 link-secondary" href="https://github.com/armory3d/armory">GitHub</a></li>
+              <li class="nav-item mb-2"><a class="nav-link p-0 link-secondary" href="https://github.com/armory3d/armory/issues">Tracker</a></li>
+              <li class="nav-item mb-2"><a class="nav-link p-0 link-secondary" href="https://github.com/armory3d/armory/wiki/contribute">Contribute</a></li>
+            </ul>
+          </div>
+          <!-- Credits -->
+          <div class="col-6 col-lg-2">
+            <h5>CREDITS</h5>
+            <ul class="nav flex-column">
+              <li class="nav-item mb-2"><a class="nav-link p-0 link-secondary" href="http://kode.tech">Kode</a></li>
+              <li class="nav-item mb-2"><a class="nav-link p-0 link-secondary" href="https://blender.org">Blender</a></li>
+              <li class="nav-item mb-2"><a class="nav-link p-0 link-secondary" href="https://github.com/armory3d/armory/graphs/contributors">Contributors</a></li>
+            </ul>
+          </div>
+          <!-- Contact -->
+          <div class="col-6 col-lg-2">
+            <h5>CONTACT</h5>
+            <ul class="nav flex-column">
+              <li class="nav-item mb-2"><a class="nav-link p-0 link-secondary" href="/community">Community</a></li>
+              <script>
+                var user_name = "lubos";
+                var host_name = "armory3d.org";
+                document.write("<li class='nav-item mb-2'><a class='nav-link p-0 link-secondary' href='" + "mail" + "to:" + user_name + "@" + host_name + "'>Email</a></li>");
+              </script>
+            </ul>
+          </div>
+          <!-- Copyright -->
+          <div class="col-6 col-lg-3">
+            <ul class="nav flex-column">
+              <li class="nav-item mb-2">&copy; 2022 Lubos Lenco & contributors</li>
+              <li class="nav-item mb-2"><a class="nav-link p-0 link-secondary" href="https://github.com/armory3d/armory/blob/main/LICENSE.md#the-zliblibpng-license">Armory3D License</a></li>
+              <li class="nav-item mb-2"><a class="nav-link p-0 link-secondary" href="https://github.com/armory3d/armory/blob/main/blender/arm/LICENSE.md">Blender License</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script>
+    // Theme Toggle
+    function toggleTheme(t) {
+      const e = document.querySelectorAll("*");
+      for (let i=0; i<e.length; i++) {
+        // bg-light & bg-dark & bg-secondary & bg-thirdly
+        if (e[i].classList.contains("bg-light")) {
+          e[i].classList.replace("bg-light", "bg-dark");
+        } else if (e[i].classList.contains("bg-dark")) {
+          e[i].classList.replace("bg-dark", "bg-light");
+        } else if (e[i].classList.contains("bg-secondary")) {
+          e[i].classList.replace("bg-secondary", "bg-thirdly");
+        } else if (e[i].classList.contains("bg-thirdly")) {
+          e[i].classList.replace("bg-thirdly", "bg-secondary");
+        }
+        // text-light & text-dark & text-white-50 & text-muted
+        if (e[i].classList.contains("text-light")) {
+          e[i].classList.replace("text-light", "text-dark");
+        } else if (e[i].classList.contains("text-dark")) {
+          e[i].classList.replace("text-dark", "text-light");
+        } else if (e[i].classList.contains("text-white-50")) {
+          e[i].classList.replace("text-white-50", "text-muted");
+        } else if (e[i].classList.contains("text-muted")) {
+          e[i].classList.replace("text-muted", "text-white-50");
+        }
+        // navbar-light & navbar-dark
+        if (e[i].classList.contains("navbar-light")) {
+          e[i].classList.replace("navbar-light", "navbar-dark");
+        } else if (e[i].classList.contains("navbar-dark")) {
+          e[i].classList.replace("navbar-dark", "navbar-light");
+        }
+        // text-bg-light & text-bg-dark & text-bg-secondary & text-bg-thirdly
+        if (e[i].classList.contains("text-bg-light")) {
+          e[i].classList.replace("text-bg-light", "text-bg-dark");
+        } else if (e[i].classList.contains("text-bg-dark")) {
+          e[i].classList.replace("text-bg-dark", "text-bg-light");
+        } else if (e[i].classList.contains("text-bg-secondary")) {
+          e[i].classList.replace("text-bg-secondary", "text-bg-thirdly");
+        } else if (e[i].classList.contains("text-bg-thirdly")) {
+          e[i].classList.replace("text-bg-thirdly", "text-bg-secondary");
+        }
+        // border-light & border-dark
+        if (e[i].classList.contains("border-light")) {
+          e[i].classList.replace("border-light", "border-dark");
+        } else if (e[i].classList.contains("border-dark")) {
+          e[i].classList.replace("border-dark", "border-light");
+        }
+      }
+      // bi-sun & bi-moon-stars
+      if (t.children[0].classList.contains("bi-sun")) {
+        t.children[0].classList.replace("bi-sun", "bi-moon-stars");
+      } else if (t.children[0].classList.contains("bi-moon-stars")) {
+        t.children[0].classList.replace("bi-moon-stars", "bi-sun");
+      }
+    }
+    f = document.getElementById("formDocs");
+    // Docs Search Toggle - Search/Close Icons
+    function docsToggle(e) {
+      if (!e.classList.contains("collapsed")) {
+        e.children[0].classList.replace("bi-search", "bi-x-lg");
+      } else {
+        e.children[0].classList.replace("bi-x-lg", "bi-search");
+      }
+    }
+    // Docs Search - Form Reset
+    function formReset() {
+      formDocs.classList.remove("show");
+      formDocs.parentElement.children[2].classList.toggle("collapsed");
+      let a = formDocs.parentElement.children[2].getAttribute("aria-expanded");
+      a = "false";
+      formDocs.parentElement.children[2].setAttribute("aria-expanded", a);
+      f.children[0].value = "";
+    }
+    // Docs Search - Close Control
+    window.addEventListener("keydown", e => {
+      if (e.key === "Escape") {
+        formReset();
+      }
+    });
+    // Docs Search - Search Destination
+    function checkValidation() {
+      if (f.children[0].value.length >= 3) {
+        location.href = "https://forums.armory3d.org/search?q=" + String(f.children[0].value);
+      } else {
+        alert("Search terms require minimum of three letters.");
+      }
+    }
+    // Docs Search - Init Undo
+    window.addEventListener("pageshow", function() {
+      formReset();
+    });
+    </script>
+  </body>
+</html>
